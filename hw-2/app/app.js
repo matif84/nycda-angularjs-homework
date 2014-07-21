@@ -1,14 +1,14 @@
 angular.module('questions', []).constant('Data', {
     questions: [
         {question: 'How often do you watch sports?', options: [
-            {value: 'Everyday'},
-            {value: 'Often'},
+            {value: 'Everyday'  },
+            {value: 'Often', answer: true},
             {value: 'Some days'},
             {value: 'Rarely'},
             {value: 'Never'}
         ]},
         {question: 'What is the best pet for your home?', options: [
-            {value: 'Cat'},
+            {value: 'Cat', answer: true },
             {value: 'Dog'},
             {value: 'Fish'},
             {value: 'Rabbit'},
@@ -17,7 +17,7 @@ angular.module('questions', []).constant('Data', {
         {question: 'What is your preferred bank?', options: [
             {value: 'Chase'},
             {value: 'Citi'},
-            {value: 'Bank of America'},
+            {value: 'Bank of America', answer: true},
             {value: 'Wells Fargo'},
             {value: 'Regional'},
             {value: 'Online'},
@@ -26,14 +26,14 @@ angular.module('questions', []).constant('Data', {
         {question: 'How many siblings do you have?', options: [
             {value: 'More than 4'},
             {value: '4'},
-            {value: '3'},
+            {value: '3', answer: true},
             {value: '2'},
             {value: '1'},
             {value: 'None'}
         ]},
         {question: 'Do you eat seafood?', options: [
             {value: true},
-            {value: false}
+            {value: false , answer: true}
         ]}
     ]
 });
