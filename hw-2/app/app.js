@@ -8,8 +8,14 @@ angular.module('questions', []).constant('Data', {
             {value: 'Never'}
         ]},
         {question: 'What is the best pet for your home?', options: [
+
             {value: 'Cat', answer: true },
             {value: 'Dog'},
+
+            {value: 'Cat'},
+            {value: 'Dog'},
+
+
             {value: 'Fish'},
             {value: 'Rabbit'},
             {value: 'Other'}
