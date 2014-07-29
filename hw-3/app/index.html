@@ -20,20 +20,41 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div class="container">
-        <form role="form"
-              ng-controller="SearchCtrl">
+    <div class="container" ng-controller="SearchCtrl">
+        <form role="form">
             <div class="form-group col-xs-12 col-md-9">
                    <input type="text"
                        class="form-control"
-                       placeholder="Article Search">
+                       placeholder="Article Search"
+                       >
             </div>
             <div class="form-group col-xs-12 col-md-3">
                 <button type="submit"
-                        class="btn btn-danger">Search NYT Articles
+                        class="btn btn-danger"
+                        ng-click="getArticles()">Search NYT Articles
                 </button>
             </div>
         </form>
+
+
+        <table>
+            <thead>
+            <tr>
+                <td>Headline</td>
+                <td>Body</td>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-bind="error" style="color:red;"></tr>
+            <tr ng-repeat="a in Articles">
+                <td> {{a.headline.main}} </td>
+                <td> {{a.lead_paragraph}} </td>
+            </tr>
+            </tbody>
+        </table>
+
+
+
     </div>
 
 
@@ -85,5 +106,5 @@
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/search.js"></script>
         <!-- endbuild -->
-</body>
+/</body>
 </html>
